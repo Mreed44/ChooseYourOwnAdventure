@@ -23,24 +23,72 @@ var game = {
         cave: {
             background_image: "fire.gif",
             music: "Final-Fantasy-7-Boss-Battle.mp3",
-            message: "You come across a fire monster or something!",
+            message: "You come across a fire monster!",
             choices: [
                 {
-                    text: "Start over",
-                    nextLevel: "start",
+                    text: "Grab fire extinguisher",
+                    nextLevel: "faceOff",
+                },
+                {
+                    text: "Tip-toe out of the cave",
+                    nextLevel: "field",
                 },
             ]
         },
 
         field: {
-            message: "Some adventurer you are...",
+            message: "You are now in a sunny field",
             choices: [
                 {
-                    text: "Start over",
+                    text: "Take a nap in the grass",
+                    nextLevel: "niceDay",
+                },
+                {
+                    text: "Pick some flowers",
+                    nextLevel: "niceDay",
+                },
+            ]
+        },
+        faceOff: {
+            message: "EXTINGUISH!",
+            choices: [
+                {
+                    text: "Spray fire monster!",
+                    nextLevel: "end",
+                },
+                 {
+                    text: "Have a chat and see if it's a friendly fire monster",
+                    nextLevel: "teaTime",
+                },
+            ]
+        },
+        niceDay: {
+            message: "Well, you've had quite a nice day...",
+            choices: [
+                {
+                    text: "Start Over",
                     nextLevel: "start",
                 },
             ]
         },
-
+        teaTime: {
+            message: "Fire monster matches kindness with kindness and invites you to tea time. Enjoy your new friend.",
+            choices: [
+                {
+                    text: "Start Over",
+                    nextLevel: "start",
+                },
+            ]
+        },
+        end: {
+            message: "Fire monsters are pretty powerful. You're decision, however brave, was not advisable.",
+            choices: [
+                {
+                    text: "Start Over",
+                    nextLevel: "start",
+                },
+            ]
+        },
+        
     }
 };
